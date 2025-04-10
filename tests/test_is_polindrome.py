@@ -19,6 +19,14 @@ class Test_is_palindrome(unittest.TestCase):
         self.assertEqual(is_palindrome('botella'),False)
     def no_palindrome_3(self):
         self.assertEqual(is_palindrome('rusia'),False)
+    def edge_case_1(self):
+        self.assertEqual(is_palindrome('a'),False)
+    def edge_case_2(self):
+        self.assertEqual(is_palindrome(''),False)
+    def edge_case_3(self):
+        self.assertEqual(is_palindrome('H'),False)
+
+
 
 
 
