@@ -10,7 +10,7 @@ class Test_is_palindrome(unittest.TestCase):
     def test_polindrome_phrase_1(self):
         self.assertEqual(is_palindrome('Anita lava la tina'),True)
     def test_polindrom_phrase_2(self):
-        self.assertEqual(is_palindrome('Yo hago yoga hoy'),False)
+        self.assertEqual(is_palindrome('Yo hago yoga hoy'),True)
     def test_polindrom_phrase_3(self):
         self.assertEqual(is_palindrome('Aman a Panama'),True)
     def test_no_palindrome_1(self):
@@ -25,6 +25,10 @@ class Test_is_palindrome(unittest.TestCase):
         self.assertEqual(is_palindrome(''),False)
     def test_edge_case_3(self):
         self.assertEqual(is_palindrome('H'),False)
+    def test_punctiation_1(self):
+        self.assertEqual(is_palindrome('Madam, I\'m Adam'),True)
+    def test_punctiation_2(self):
+        self.assertEqual(is_palindrome("A man, a plan, a canal: Panama"),True)
 
 if __name__=="__main__":
     unittest.main()
